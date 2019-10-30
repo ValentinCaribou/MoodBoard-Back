@@ -32,4 +32,14 @@ export class MoodService {
         const createdMood = new this.moodModel(createMoodDto);
         return await createdMood.save();
     }
+
+    async delete(id): Promise<string> {
+        try {
+            await this.moodModel.findByIdAndRemove(id).exec();
+            return 'The todo has been deleted';
+        }
+        catch (err){
+            return 'The todo could not be deleted';
+        }
+    }
 }
