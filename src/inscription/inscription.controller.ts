@@ -12,7 +12,7 @@ export class InscriptionController {
     }
 
     @Post()
-    async login(@Body() body) {
+    async inscription(@Body() body) {
         return await this.inscriptionService.create(body);
     }
 }
