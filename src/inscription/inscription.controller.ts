@@ -1,4 +1,4 @@
-import {Controller, Get} from '@nestjs/common';
+import {Body, Controller, Get, Post} from '@nestjs/common';
 import {LoginService} from "../login/login.service";
 import {InscriptionService} from "./inscription.service";
 
@@ -9,5 +9,10 @@ export class InscriptionController {
     @Get()
     async getListUser(){
         return await this.inscriptionService.findAll();
+    }
+
+    @Post()
+    async login(@Body() body) {
+        return await this.inscriptionService.create(body);
     }
 }
