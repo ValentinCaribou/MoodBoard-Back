@@ -13,7 +13,7 @@ import { MoodService } from './mood/mood.service';
 
 @Module({
   imports: [
-      MongooseModule.forRoot('mongodb://localhost:27017/Moodboard'),
+      MongooseModule.forRoot('mongodb://moodboard:27017/Moodboard'),
       MongooseModule.forFeature([{ name: 'User', schema: userSchema }]),
       MongooseModule.forFeature([{ name: 'Mood', schema: weekMoodSchema }])
   ],
