@@ -1,4 +1,4 @@
-import {Body, Controller, Get, Post} from '@nestjs/common';
+import {Body, Controller, Get, Param, Post, Put} from '@nestjs/common';
 import {LoginService} from "../login/login.service";
 import {InscriptionService} from "./inscription.service";
 
@@ -14,5 +14,10 @@ export class InscriptionController {
     @Post()
     async inscription(@Body() body) {
         return await this.inscriptionService.create(body);
+    }
+
+    @Put(':id')
+    async update(@Param('id') id, @Body() body){
+        return await this.inscriptionService.update(id, body);
     }
 }
