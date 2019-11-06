@@ -4,5 +4,5 @@ export class CreateUserDto {
     readonly role: String;
     readonly name: String;
     readonly surname: String;
-    readonly alias: String;
+    readonly theme: String;
 }

@@ -4,5 +4,5 @@ export interface User {
     role:String;
     name:String;
     surname:String;
-    alias:String;
+    theme:String;
 }

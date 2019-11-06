@@ -6,5 +6,5 @@ export const userSchema = new mongoose.Schema({
     role:String,
     name:String,
     surname:String,
-    alias:String,
+    theme:String,
 });
