@@ -3,4 +3,5 @@ export class CreateParamDto {
     readonly theme: String;
     readonly formatPreference: String;
     readonly listEmojis: [];
+    readonly listThemes : [];
 }
