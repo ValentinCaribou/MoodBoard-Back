@@ -35,8 +35,7 @@ export class MoodService {
 
     async delete(id): Promise<string> {
         try {
-            await this.moodModel.findByIdAndRemove(id).exec();
-            return 'The todo has been deleted';
+            return await this.moodModel.findByIdAndRemove(id).exec();
         }
         catch (err){
             return 'The todo could not be deleted';
