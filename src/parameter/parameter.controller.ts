@@ -6,28 +6,28 @@ export class ParamController {
     constructor(private readonly parameterService: ParamService) {}
 
     @Get()
-    async getListMood(){
+    async getAllParameters(){
         return await this.parameterService.findAll();
     }
 
     @Post()
-    async addRow(@Body() body) {
+    async addParameters(@Body() body) {
         return await this.parameterService.create(body);
     }
 
     @Get(':id')
-    async getMood(@Param('id') id){
+    async getParameters(@Param('id') id){
         return await this.parameterService.findOne(id);
     }
 
     @Put(':id')
-    async updateMood(@Param('id') id, @Body() body){
+    async updateParameters(@Param('id') id, @Body() body){
         console.log(body);
         return await this.parameterService.update(id, body);
     }
 
     @Delete(':id')
-    async remove(@Param('id') id){
+    async removeParameters(@Param('id') id){
         return await this.parameterService.delete(id);
     }
 }
