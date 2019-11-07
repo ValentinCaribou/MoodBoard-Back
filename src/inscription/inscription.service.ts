@@ -24,7 +24,12 @@ export class InscriptionService {
         if (!user._id) {
             console.log('not found');
         }
+        user.email = body.email;
+        user.password = body.password;
         user.role = body.role;
+        user.name = body.name;
+        user.surname = body.surname;
+        user.theme = body.theme;
         await this.userModel.findByIdAndUpdate(id, user).exec();
         return await this.userModel.findById(id).exec();
     }
