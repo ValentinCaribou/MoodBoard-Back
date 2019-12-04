@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import {InjectModel} from "@nestjs/mongoose";
 import {Mood} from "../interfaces/mood.interface";
-import { Model } from 'mongoose';
+import {Model} from 'mongoose';
 import {CreateMoodDto} from "../dto/createMood.dto";
 
 @Injectable()
